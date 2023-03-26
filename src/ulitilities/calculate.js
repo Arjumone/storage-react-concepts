@@ -1,0 +1,30 @@
+import { useReducer } from "react";
+
+const add = (first,second) => {
+    return first + second;
+}
+const multify = (first,second) => {
+    return first * second;
+}
+// const numbers = [23, 54, 76, 12, 70];
+// const sumReducer = (previous, current) => previous + current;
+// const total = numbers.reduce(sumReducer, 0)
+
+// const items = [
+//     {id:1, name:'alta',price:100},
+//     {id:1, name:'alta',price:100},
+//     {id:1, name:'alta',price:100},
+//     {id:1, name:'alta',price:100},
+//     {id:1, name:'alta',price:100},
+// ]
+
+// const itemsSumReducer = (previous, current) =>previous +current.price;
+// const itemTotal = items.reduce(itemsSumReducer, 0);
+
+const getTotalPrice = products =>{
+    const reducer = (previous, current) =>previous + current.price;
+    const total = products.reduce(reducer, 0);
+    return total;
+}
+
+export {add, multify, getTotalPrice as getTotal};
